@@ -1,0 +1,27 @@
+{
+  "name": "hungry-cookie-monster",
+  "version": "1.0.0",
+  "description": "Bake cookies and feed them to the cookie monster.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client:dev": "cd client && npm run dev",
+    "client:build": "cd client && npm run build",
+    "server:dev": "cd server && nodemon index.ts",
+    "start": "concurrently \"node server.js\" \"node client.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathanaelhauser/hungry-cookie-monster.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nathanaelhauser/hungry-cookie-monster/issues"
+  },
+  "homepage": "https://github.com/nathanaelhauser/hungry-cookie-monster#readme",
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
