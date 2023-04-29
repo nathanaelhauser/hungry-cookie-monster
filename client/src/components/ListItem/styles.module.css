@@ -1,0 +1,14 @@
+.listItem {
+  display: block;
+  padding: 1.5rem 2rem;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  color: #111;
+}
