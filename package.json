@@ -7,8 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "client:dev": "cd client && npm run dev",
     "client:build": "cd client && npm run build",
-    "server:dev": "cd server && nodemon index.ts",
-    "start": "concurrently \"node server.js\" \"node client.js\""
+    "client:prod": "cd client && npm run prod",
+    "server:dev": "cd server && npm start",
+    "sever:build": "cd server && tsc index.ts",
+    "start": "concurrently \"npm run client:dev\" \"npm run server:dev\"",
+    "build": "concurrently \"npm run client:build\" \"npm run server:build\""
   },
   "repository": {
     "type": "git",
@@ -23,5 +26,8 @@
   "homepage": "https://github.com/nathanaelhauser/hungry-cookie-monster#readme",
   "dependencies": {
     "concurrently": "^7.6.0"
+  },
+  "devDependencies": {
+    "tsc-watch": "^6.0.4"
   }
 }
