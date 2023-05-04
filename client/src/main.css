@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Kalam Regular";
+  src: url("fonts/kalam-regular-webfont.woff") format("woff"),
+    url("fonts/Kalam-Regular.ttf") format("truetype");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +12,7 @@
 
 html {
   font-size: 62.5%;
+  font-family: "Kalam Regular", sans-serif;
   box-sizing: border-box;
 }
 
