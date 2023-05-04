@@ -1,11 +1,12 @@
-import styles from "./styles.module.css";
+import styles from "./styles.module.scss";
 
 type ListItemProps = {
+  id: string;
   name: string;
   onClick?: () => void;
 };
 
-const ListItem = ({ name, onClick }: ListItemProps) => {
+const ListItem = ({ id, name, onClick }: ListItemProps) => {
   return (
     <li
       className={styles.listItem}
