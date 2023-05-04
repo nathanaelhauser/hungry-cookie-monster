@@ -1,9 +1,9 @@
 // Load environment variables from .env file right at the top of the file
 import { config } from "dotenv";
-config({ path: resolve(__dirname, "../.env") });
+const path = require("path");
+config({ path: path.resolve(__dirname, "../.env") });
 
-import { resolve } from "path";
-import express from "express";
+const express = require("express");
 import session from "./config/session";
 import db from "./config/database";
 import router from "./routes";
@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3001;
 // Define middleware here
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(resolve(__dirname, "../client/build")));
+app.use(express.static(path.resolve(__dirname, "../client/build")));
 app.use(session);
 
 // Define API routes here
