@@ -1,4 +1,5 @@
-import session, { CookieOptions, SessionOptions } from "express-session";
+const session = require("express-session");
+import { CookieOptions, SessionOptions } from "express-session";
 import { v4 as uuidv4 } from "uuid";
 
 let cookieConfig: CookieOptions = {
