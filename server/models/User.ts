@@ -1,4 +1,5 @@
 import { Schema, model } from "mongoose";
+import bcrypt from "bcrypt";
 
 const userSchema = new Schema(
   {
@@ -14,6 +15,7 @@ const userSchema = new Schema(
       required: [true, "Password is required"],
       minLength: [8, "Password must be at least 8 characters"],
       maxLength: [32, "Password must be at most 32 characters"],
+      set: (value: string) => bcrypt.hashSync(value, 10),
       validate: [
         {
           validator: function (value: string) {
